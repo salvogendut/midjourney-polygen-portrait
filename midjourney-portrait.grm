@@ -9,23 +9,27 @@ I ::=   "title:    Midjourney Portrait\n"
 
 (* Ideally this will be used to generate Midjourney AI portraits *)
 
- S ::= What Where "," Doingwhat ;
+ S ::= What Where "," Doingwhat "." PaintStyle "," LikeWho style ;
 
-Race ::= asian | african | indian | latino | white ;
+Race ::= albino | asian | african | indian | latino | white ;
 
-Complexion ::= dark | pale | lightskinned | darkskinned | bluish | orangey | greenish | reddish ;
+Complexion ::=  pale | lightskinned | darkskinned | HairColor skinned  ;
 
 Color ::= red | blue | yellow | green | violet | brown | ^n orange | pink |^n indigo | purple | crimson ;
+
+HairColor ::= red | blue | yellow | green | violet | brown | orange | pink | indigo | purple | crimson ;
+
+Eyes ::= HairColor eyes [ with HairColor speckles ] ;
 
 Length ::= long | short ; 
 
 HairStyle ::= pointy | curly ;
 
-HairStyle2 ::= like ( reptile's scales | bird's feathers | frog's skin | armadillo's scales | peacock's feathers | parrot's feathers );
+HairStyle2 ::= like a ( reptile's scales | bird's feathers | frog's skin |^n armadillo's scales | peacock's feathers | parrot's feathers );
 
-Hair ::= with Length Color [ and Color ] HairStyle hair HairStyle2;
+Hair ::= with Length HairColor [ and HairColor ] HairStyle hair HairStyle2;
 
-What ::= a MAppearance "," Complexion "," Race ( boy | young man | man | old man  ) "," Hair "," MWearing "," |  a FAppearance "," Complexion "," Race ( girl | young woman | woman | old woman ) "," Hair "," FWearing ","  ;
+What ::= a MAppearance "," Complexion "," Race ( boy | young man | man | old man  ) "," Hair and Eyes "," MWearing "," |  a FAppearance "," Complexion "," Race ( girl | young woman | woman | old woman ) "," Hair and Eyes "," FWearing ","  ;
 
 AppearAttr1 ::= ( heartbreakingly |^n impossibly |^n incredibly ) ;
 
@@ -33,13 +37,17 @@ MAppearance ::= AppearAttr1  ( handsome | attractive | good looking )  ;
 
 FAppearance ::= AppearAttr1 ( beautiful | pretty | attractive | good looking ) ;
 
-MWearing ::= wearing a Color ( kimono | coat | jacket | sweater | shirt | cape ) ;
+MWearing ::= wearing a Color ( kimono | coat | jacket | sweater | shirt | cape ) [ and a HairColor hat ] ;
 
-FWearing ::= wearing a Color ( kimono | vest | dress | bikini | blouse | cape ) ;
+FWearing ::= wearing a Color ( kimono | vest | dress | bikini | blouse | cape ) [ and a HairColor hat ] ;
 
-Where ::= in a room | on a bed | on a chair | on a throne | next to a tree ;
+Where ::= in a room | on a chair | on a throne | under a tree ;
 
-Doingwhat ::= ( holding a | showing their ) AppearAttr2 (  book | apple | dagger | hand | tongue | finger | clock | foot | hat ) ;
+Doingwhat ::=  holding a AppearAttr2 (  book | apple | dagger | clock | knife | pen ) | showing their ( hand | tongue | fingers | heart ) ;
 
 AppearAttr2 ::= broken | metallic | glass | shiny | plastic | melted | bubbling | warped ;
+
+PaintStyle ::= anime | oil on canvas | black and white pencil | ballpoint pen | cartoon | abstract | impressionist | comics | crayons ;
+
+LikeWho ::= picasso | mondrian | dali | boccioni | escher | de chirico | max ernst | chagall ;
 
