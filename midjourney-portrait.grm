@@ -19,9 +19,9 @@ What ::= a MAppearance Race ( boy | young man | man | old man  ) MWearing |  a F
 
 AppearAttr1 ::= ( heartbreakingly |^n impossibly |^n incredibly ) ;
 
-MAppearance ::= AppearAttr1  ( handsome | ^n attractive | good looking )  ;
+MAppearance ::= AppearAttr1  ( handsome | attractive | good looking )  ;
 
-FAppearance ::= AppearAttr1 ( beautiful | pretty | ^n attractive | good looking ) ;
+FAppearance ::= AppearAttr1 ( beautiful | pretty | attractive | good looking ) ;
 
 MWearing ::= wearing a Color ( kimono | coat | jacket | sweater | shirt ) ;
 
@@ -29,5 +29,7 @@ FWearing ::= wearing a Color ( kimono | vest | dress | bikini | blouse ) ;
 
 Where ::= in a room | on a bed | on a chair | on a throne | next to a tree ;
 
-Doingwhat ::= holding ( a book | an apple | a dagger ) | showing their ( hand | tongue | finger ) ;
+Doingwhat ::= ( holding a | showing their ) AppearAttr2 (  book | apple | dagger  hand | tongue | finger | clock | foot | hat ) ;
+
+AppearAttr2 ::= broken | metallic | glass | shiny | plastic | melted | bubbling | warped ;
 
