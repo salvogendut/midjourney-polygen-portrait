@@ -47,7 +47,7 @@ Doingwhat ::=  holding a AppearAttr2 (  book | apple | dagger | clock | knife | 
 
 AppearAttr2 ::= broken | metallic | glass | shiny | plastic | melted | bubbling | warped ;
 
-PaintStyle ::= anime | oil on canvas | black and white pencil | ballpoint pen | cartoon | abstract | impressionist | comics | crayons ;
+PaintStyle ::= anime | oil on canvas | black and white pencil | ballpoint pen | cartoon | abstract | impressionist | comics | crayons | mosaic ;
 
-LikeWho ::= picasso | mondrian | dali | boccioni | escher | de chirico | max ernst | chagall ;
+LikeWho ::= picasso | mondrian | dali | boccioni | escher | de chirico | max ernst | chagall | hokusai ;
 
