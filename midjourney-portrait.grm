@@ -9,7 +9,7 @@ I ::=   "title:    Midjourney Portrait\n"
 
 (* Ideally this will be used to generate Midjourney AI portraits *)
 
- S ::= What Where "," Doingwhat "." PaintStyle "," LikeWho style ;
+ S ::= What Where "." PaintStyle "," LikeWho style ;
 
 Race ::= albino | asian | african | indian | latino | white ;
 
