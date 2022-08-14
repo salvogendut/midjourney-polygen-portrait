@@ -9,13 +9,23 @@ I ::=   "title:    Midjourney Portrait\n"
 
 (* Ideally this will be used to generate Midjourney AI portraits *)
 
- S ::= What Where Doingwhat ;
+ S ::= What Where "," Doingwhat ;
 
-Race ::= asian | african | indian | latino | pale white ;
+Race ::= asian | african | indian | latino | white ;
+
+Complexion ::= dark | pale | lightskinned | darkskinned | bluish | orangey | greenish | reddish ;
 
 Color ::= red | blue | yellow | green | violet | brown | ^n orange | pink |^n indigo | purple | crimson ;
 
-What ::= a MAppearance Race ( boy | young man | man | old man  ) MWearing |  a FAppearance Race ( girl | young woman | woman | old woman ) FWearing  ;
+Length ::= long | short ; 
+
+HairStyle ::= pointy | curly ;
+
+HairStyle2 ::= like ( reptile's scales | bird's feathers | frog's skin | armadillo's scales | peacock's feathers | parrot's feathers );
+
+Hair ::= with Length Color [ and Color ] HairStyle hair HairStyle2;
+
+What ::= a MAppearance "," Complexion "," Race ( boy | young man | man | old man  ) "," Hair "," MWearing "," |  a FAppearance "," Complexion "," Race ( girl | young woman | woman | old woman ) "," Hair "," FWearing ","  ;
 
 AppearAttr1 ::= ( heartbreakingly |^n impossibly |^n incredibly ) ;
 
@@ -23,13 +33,13 @@ MAppearance ::= AppearAttr1  ( handsome | attractive | good looking )  ;
 
 FAppearance ::= AppearAttr1 ( beautiful | pretty | attractive | good looking ) ;
 
-MWearing ::= wearing a Color ( kimono | coat | jacket | sweater | shirt ) ;
+MWearing ::= wearing a Color ( kimono | coat | jacket | sweater | shirt | cape ) ;
 
-FWearing ::= wearing a Color ( kimono | vest | dress | bikini | blouse ) ;
+FWearing ::= wearing a Color ( kimono | vest | dress | bikini | blouse | cape ) ;
 
 Where ::= in a room | on a bed | on a chair | on a throne | next to a tree ;
 
-Doingwhat ::= ( holding a | showing their ) AppearAttr2 (  book | apple | dagger  hand | tongue | finger | clock | foot | hat ) ;
+Doingwhat ::= ( holding a | showing their ) AppearAttr2 (  book | apple | dagger | hand | tongue | finger | clock | foot | hat ) ;
 
 AppearAttr2 ::= broken | metallic | glass | shiny | plastic | melted | bubbling | warped ;
 
