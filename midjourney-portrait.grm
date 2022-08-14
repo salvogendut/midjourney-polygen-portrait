@@ -1,0 +1,33 @@
+I ::=   "title:    Midjourney Portrait\n"
+      ^ "author:   Salvo Gendut &lt;salvogendut@gmail.com&gt;"
+      ^ "language: english\n"
+      ^ "status:   embrional\n"
+      ^ "topic:    art\n"
+      ^ "audience: anybody\n"
+      ^ "created:  14/08/2022"
+;
+
+(* Ideally this will be used to generate Midjourney AI portraits *)
+
+ S ::= What Where Doingwhat ;
+
+Race ::= asian | african | indian | latino | pale white ;
+
+Color ::= red | blue | yellow | green | violet | brown | ^n orange | pink |^n indigo | purple | crimson ;
+
+What ::= a MAppearance Race ( boy | young man | man | old man  ) MWearing |  a FAppearance Race ( girl | young woman | woman | old woman ) FWearing  ;
+
+AppearAttr1 ::= ( heartbreakingly |^n impossibly |^n incredibly ) ;
+
+MAppearance ::= AppearAttr1  ( handsome | ^n attractive | good looking )  ;
+
+FAppearance ::= AppearAttr1 ( beautiful | pretty | ^n attractive | good looking ) ;
+
+MWearing ::= wearing a Color ( kimono | coat | jacket | sweater | shirt ) ;
+
+FWearing ::= wearing a Color ( kimono | vest | dress | bikini | blouse ) ;
+
+Where ::= in a room | on a bed | on a chair | on a throne | next to a tree ;
+
+Doingwhat ::= holding ( a book | an apple | a dagger ) | showing their ( hand | tongue | finger ) ;
+
